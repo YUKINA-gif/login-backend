@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
-class ExampleTest extends TestCase
+class LoginTest extends TestCase
 {
     /**
      * データベース準備
