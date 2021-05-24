@@ -35,4 +35,5 @@ jobs:
         DB_DATABASE: ec
         DB_USERNAME: root
         DB_PASSWORD: dbpj
-      run: vendor/bin/phpunit
+      run: docker-compose exec -T mysql bash -c "mysqladmin --wait --count 60 ping -proot || exit 1"
+          vendor/bin/phpunit
