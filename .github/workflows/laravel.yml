@@ -32,10 +32,6 @@ jobs:
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Generate key
       run: php artisan key:generate --env=testing
-    - name: migrate
-      run: php artisan migrate --force
-      env:
-        DB_HOST: 127.0.0.1
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_HOST: 127.0.0.1
