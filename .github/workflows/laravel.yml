@@ -39,6 +39,6 @@ jobs:
     - name: Generate key
       run: php artisan key:generate --env=testing
     - name: migrate
-      run: php artisan migrate
+      run: php artisan migrate --env=testing
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
