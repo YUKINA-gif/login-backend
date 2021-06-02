@@ -49,5 +49,5 @@ jobs:
         DB_DATABASE: ec
         DB_USERNAME: root
         DB_PASSWORD: dbpj 
-      run: php artisan migrate  
-           vendor/bin/phpunit
+      run: php artisan migrate;  
+           vendor/bin/phpunit;
