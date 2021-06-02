@@ -8,7 +8,7 @@ on:
 
 jobs:
   laravel-tests:
-
+          
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,11 @@ jobs:
       run: php artisan key:generate --env=testing
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
+    - name: Setup Database
+      # MySQL の起動とデータベースの作成
+      run: |
+        sudo systemctl start mysql.service
+        mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS test;'
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: mysql
