@@ -31,7 +31,7 @@ jobs:
         mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS test;'
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
-        DB_CONNECTION: testing
+        DB_CONNECTION: mysql
         DB_HOST: 127.0.0.1
         DB_PORT: 3306
         DB_DATABASE: ec
