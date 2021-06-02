@@ -18,7 +18,7 @@ jobs:
           - 3306:3306
         env:
           MYSQL_ROOT_PASSWORD: 
-          MYSQL_DATABASE: hoge_app
+          MYSQL_DATABASE: ec
           MYSQL_USER: root
           MYSQL_PASSWORD: 
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
