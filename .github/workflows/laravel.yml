@@ -51,7 +51,7 @@ jobs:
     - name: Generate key
       run: php artisan key:generate --env=testing
     - name: migrate
-      run: php artisan migrate -y
+      run: php artisan migrate --force
       
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
