@@ -23,7 +23,9 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
           options: --health-cmd "mysqladmin ping -h localhost" --health-interval 20s --health-timeout 10s --health-retries 10
     
-    
+    env:
+      DB_CONNECTION: mysql
+      DB_DATABASE: ec
       
     steps:
     - uses: actions/checkout@v2
